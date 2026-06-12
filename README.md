@@ -1,7 +1,7 @@
-
+<h1>
 THIS IS CURRENTLY NOT COMPLETED
 PLZ DONT JUDGE
-
+</h1>
 # KashDog
 
 KashDog is an educational Android-first offline payment prototype. It uses virtual demo coins only and does not connect to UPI, banks, cards, or real money rails.
