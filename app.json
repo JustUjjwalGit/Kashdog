@@ -1,15 +1,26 @@
 {
   "expo": {
-    "name": "Kashdog",
-    "slug": "Kashdog",
+    "name": "KashDog",
+    "slug": "kashdog",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "KashDog scans receive QR codes for demo offline payments.",
+        "NSFaceIDUsageDescription": "KashDog can use Face ID to unlock your local demo wallet."
+      }
     },
     "android": {
+      "permissions": [
+        "CAMERA",
+        "BLUETOOTH",
+        "BLUETOOTH_ADMIN",
+        "BLUETOOTH_CONNECT",
+        "BLUETOOTH_SCAN"
+      ],
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -20,6 +31,22 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-sqlite",
+      "expo-secure-store",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow KashDog to scan receive QR codes."
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Allow KashDog to unlock your local demo wallet with Face ID."
+        }
+      ]
+    ]
   }
 }

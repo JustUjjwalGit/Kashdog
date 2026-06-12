@@ -1,0 +1,16 @@
+{
+  "name": "kashdog-sync-backend",
+  "version": "1.0.0",
+  "description": "KashDog educational prototype sync backend.",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node src/server.js",
+    "start": "NODE_ENV=production node src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "pg": "^8.16.3"
+  }
+}

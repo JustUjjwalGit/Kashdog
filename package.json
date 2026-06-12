@@ -3,10 +3,29 @@
   "version": "1.0.0",
   "main": "index.ts",
   "dependencies": {
+    "@noble/ed25519": "^3.1.0",
+    "@noble/hashes": "^2.2.0",
+    "@react-native-async-storage/async-storage": "2.2.0",
     "expo": "~56.0.11",
+    "expo-camera": "~56.0.8",
+    "expo-clipboard": "~56.0.4",
+    "expo-constants": "~56.0.18",
+    "expo-crypto": "~56.0.4",
+    "expo-haptics": "~56.0.3",
+    "expo-linear-gradient": "~56.0.4",
+    "expo-local-authentication": "~56.0.4",
+    "expo-network": "~56.0.5",
+    "expo-secure-store": "~56.0.4",
+    "expo-sqlite": "~56.0.5",
     "expo-status-bar": "~56.0.4",
+    "lucide-react-native": "^1.18.0",
     "react": "19.2.3",
-    "react-native": "0.85.3"
+    "react-dom": "19.2.3",
+    "react-native": "0.85.3",
+    "react-native-qrcode-svg": "^6.3.21",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-svg": "15.15.4",
+    "react-native-web": "^0.21.2"
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
@@ -14,9 +33,13 @@
   },
   "scripts": {
     "start": "expo start",
+    "mobile": "node scripts/start-mobile.js lan",
+    "mobile:tunnel": "node scripts/start-mobile.js tunnel",
+    "mobile:clear": "node scripts/start-mobile.js lan --clear",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "typecheck": "tsc --noEmit",
+    "backend": "npm --prefix backend run dev"
   },
   "private": true
 }
